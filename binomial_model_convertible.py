@@ -8,6 +8,8 @@ Created on Mon Dec  7 10:43:55 2020
 #%%
 def binomial_price_amer_conv_call(S0,sigma,T,r,N,lbd,call_value,no_shares,R=0.4,FV=100,q=0): 
     r"""
+    Price of a convertible callable bond in binomial model. 
+    The features are exercisable at any given time. 
     S0 = initial stock price
     
     sigma = annualized vol of the stock
@@ -51,6 +53,8 @@ def binomial_price_amer_conv_call(S0,sigma,T,r,N,lbd,call_value,no_shares,R=0.4,
 
 def binomial_price_amer_conv(S0,sigma,T,r,N,lbd,no_shares,R=0.4,FV=100,q=0):
     r"""
+    Price of a convertible bond, with no call provisions. 
+    
     S0 = initial stock price
     
     sigma = annualized vol of the stock
@@ -66,6 +70,8 @@ def binomial_price_amer_conv(S0,sigma,T,r,N,lbd,no_shares,R=0.4,FV=100,q=0):
     R = recovery rate of the bond. 
     
     lbd = default intensity of the bond. 
+    
+    FV = the face value of the bond. 
     """
     import numpy as np
     import math
